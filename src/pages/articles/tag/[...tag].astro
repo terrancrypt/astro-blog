@@ -30,6 +30,6 @@ const tagArticles = allBlogArticles.filter((article) => {
   >
   <h1 class="text-2xl pb-3 capitalize">#{tag}</h1>
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    {tagArticles.map((articles) => <ArticleCard articles={articles} />)}
+    {tagArticles.map((articles) => <ArticleCard article={articles} />)}
   </div>
 </MainLayout>
