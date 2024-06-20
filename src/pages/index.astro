@@ -1,7 +1,7 @@
 ---
 import SearchForm from "../components/SearchForm.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import ArticlesCard from "../components/ArticlesCard.astro";
+import ArticleCard from "../components/ArticleCard.astro";
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -39,7 +39,7 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
     {
       otherArticles
         .slice(0, HOMEPAGE_ARTICLE_LIMIT)
-        .map((articles) => <ArticlesCard articles={articles} />)
+        .map((articles) => <ArticleCard articles={articles} />)
     }
   </div>
 </MainLayout>
