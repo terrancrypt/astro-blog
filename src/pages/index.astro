@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import logo from "../images/logo.png";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +21,13 @@
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="images/logo.png" class="h-14" alt="TechPeople Logo" />
+          <Image
+            src={logo}
+            class="h-14"
+            alt="TechPeople Logo"
+            width={55}
+            height={55}
+          />
           <span class="self-center text-2xl font-semibold whitespace-nowrap"
             ><span class="text-indigo-400">Tech</span>People</span
           >
@@ -122,7 +133,7 @@
         >
           <a href="article.html">
             <img
-              src="images/image1.png"
+              src="/images/image1.png"
               alt="Article Image"
               class="w-full h-auto rounded-2xl"
             />
@@ -160,7 +171,7 @@
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <a href="article.html">
               <img
-                src="images/image2.png"
+                src="/images/image2.png"
                 alt="Article Image"
                 class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
               />
@@ -191,7 +202,7 @@
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <a href="article.html">
               <img
-                src="images/image3.png"
+                src="/images/image3.png"
                 alt="Article Image"
                 class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
               />
@@ -222,7 +233,7 @@
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <a href="article.html">
               <img
-                src="images/image4.png"
+                src="/images/image4.png"
                 alt="Article Image"
                 class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
               />
@@ -253,7 +264,7 @@
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <a href="article.html">
               <img
-                src="images/image5.png"
+                src="/images/image5.png"
                 alt="Article Image"
                 class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
               />
@@ -284,7 +295,7 @@
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <a href="article.html">
               <img
-                src="images/image6.png"
+                src="/images/image6.png"
                 alt="Article Image"
                 class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
               />
@@ -315,7 +326,7 @@
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <a href="article.html">
               <img
-                src="images/image7.png"
+                src="/images/image7.png"
                 alt="Article Image"
                 class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
               />
