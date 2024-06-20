@@ -39,7 +39,7 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
     {
       otherArticles
         .slice(0, HOMEPAGE_ARTICLE_LIMIT)
-        .map((articles) => <ArticleCard articles={articles} />)
+        .map((articles) => <ArticleCard article={articles} />)
     }
   </div>
 </MainLayout>
