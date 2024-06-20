@@ -3,16 +3,16 @@ import type { CollectionEntry } from "astro:content";
 import { formatDate } from "../utils";
 
 interface Props {
-  mostRecentArticle: CollectionEntry<"blog">;
+  article: CollectionEntry<"blog">;
 }
 
-const { mostRecentArticle } = Astro.props;
+const { article } = Astro.props;
 ---
 
 <div class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl">
-  <a href="article.html">
+  <a href={"/articles/" + article.slug}>
     <img
-      src="/images/image1.png"
+      src={"/images/" + article.data.image}
       alt="Article Image"
       class="w-full h-auto rounded-2xl"
     />
@@ -22,16 +22,16 @@ const { mostRecentArticle } = Astro.props;
     >
       <div>
         <h2 class="text-2xl font-semibold sm:text-3xl">
-          {mostRecentArticle.data.title}
+          {article.data.title}
         </h2>
         <p class="text-xl mt-4">
-          {formatDate(mostRecentArticle.data.pubDate)}
+          {formatDate(article.data.pubDate)}
         </p>
 
         <!-- Tags with rounded border -->
         <div class="flex mt-4 justify-center">
           {
-            mostRecentArticle.data.tags.map((tag: string) => (
+            article.data.tags.map((tag: string) => (
               <a
                 href={"articles/tag/" + tag}
                 class="px-2 py-1 border text-white rounded-full text-xs mr-2"
