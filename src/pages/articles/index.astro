@@ -28,11 +28,16 @@ const articlesForPage: CollectionEntry<"blog">[] = allBlogArticles.slice(
   <section class="container mx-auto max-w-screen-xl mt-10 px-8">
     <h1 class="text-2xl pb-3">All Articles</h1>
     <SearchForm />
-    <!-- Main Grid -->
+
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {articlesForPage.map((articles) => <ArticleCard article={articles} />)}
     </div>
 
-    <Pagination currentPage={currentPage} totalPage={totalPage} />
+    <Pagination
+      currentPage={currentPage}
+      totalPage={totalPage}
+      disablePrevious={currentPage === 1}
+      disableNext={currentPage === totalPage}
+    />
   </section>
 </MainLayout>
